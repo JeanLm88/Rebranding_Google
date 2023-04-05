@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/CSS/style.css">
+    <link rel="shortcut icon" href="assets/img/google-icon.png" type="png">
+    <title>Google</title>
+</head>
+
+<body onmouseleave="fecharDiv()" >
+    <!--Cabeçalho da pagina com seu menu horizontal-->
+    <header>
+        <nav class="nav-menu">
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item">
+                        <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" class="nav-link">Gmail</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://www.google.com.br/imghp?hl=pt-PT&tab=ri&authuser=0&ogbl"
+                            class="nav-link">Imagens</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="submenu-button" id="submenu-button" title="Google Apps" onclick="fecharcircle()"><img
+                                src="assets/img/apps.png" alt="Google Apps" title="Google Apps"
+                                class="imgapps"></button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn-Entrar" title="Conta google"><a
+                                href="https://accounts.google.com/v3/signin/identifier?dsh=S118044957%3A1679714415693924&continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&emr=1&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&ifkv=AQMjQ7Qlm8BhKYilCGiviWT9-PTj52fhf9ZZgqp_VmMco8gnssVba21jry4atQPc80JhZp_PqtvLXw&osid=1&passive=1209600&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+                                class="link-gmail">Fazer Login</a></button>
+                    </li>
+
+                </ul>
+            </div>
+            <!--Espaço reservado para o submenu Google Apps-->
+
+            <div class="nav-submenu" id="nav-submenu">
+                <ul>
+                    <li><a href="https://accounts.google.com/v3/signin/identifier?dsh=S1829401194%3A1680117524633903&continue=https%3A%2F%2Fwww.google.com%2F&ec=GAZAmgQ&hl=pt-BR&ifkv=AQMjQ7QSsam-H2fU5FcKHCJnrcKCheVBgoYTJJSC6UpQcr2L6jnHdXJ8_6zWJjJnBHcDkKH84kDbmw&passive=true&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+                            class="nav-linksub"><button class="btnlink""><img src="assets/img/google-cont.png"
+                                    class="image-cont">Conta</button></a>
+                    </li>
+                    <li><a href="index.html" class="nav-linksub"><button class="btnlink"><img
+                                    src="assets/img/google-pesq.png" class="image-googlepesq">Pesquisa</button></a>
+                    </li>
+                    <li><a href="https://business.google.com/?gmbsrc=ww-ww-ot-gs-z-gmb-l-z-h~z-ogb-u&authuser=0"
+                            class="nav-linksub"><button class="btnlink"><img src="assets/img/google-nego.png"
+                                    class="image-googlenego">Negócio</button></a>
+                    </li>
+                    <li><a href="https://maps.google.com/?authuser=0" class="nav-linksub"><button class="btnlink"><img
+                                    src="assets/img/google-location.png" class="image-googlemaps">Maps</button></a>
+                    </li>
+                    <li><a href="https://www.youtube.com/?authuser=0" class="nav-linksub"><button class="btnlink"><img
+                                    src="assets/img/youtube.png" class="image-googleyt">YouTube</button></a>
+                    </li>
+                    <li><a href="https://play.google.com/?authuser=0" class="nav-linksub"><button class="btnlink"><img
+                                    src="assets/img/google-play.png" class="image-googleplay">Play</button></a>
+                    </li>
+                    <li><a href="https://news.google.com/?authuser=0" class="nav-linksub"><button class="btnlink"><img
+                                    src="assets/img/google-past.png" class="image-googlenot">Notícias</button></a>
+                    </li>
+                    <li><a href="https://mail.google.com/mail/?authuser=0" class="nav-linksub"><button
+                                class="btnlink"><img src="assets/img/google-gmail.png"
+                                    class="image-googlegm">Gmail</button></a>
+                    </li>
+                    <li><a href="https://meet.google.com/?hs=197&authuser=0" class="nav-linksub"><button
+                                class="btnlink"><img src="assets/img/google-meet.png"
+                                    class="image-googlemeet">Meet</button></a>
+                    </li>
+                    <li><a href="https://drive.google.com/?authuser=0" class="nav-linksub"><button class="btnlink"><img
+                                    src="assets/img/google-drive.png" class="image-googledrive">Drive</button></a>
+                    </li>
+                    <li><a href="https://translate.google.com/?authuser=0" class="nav-linksub"><button
+                                class="btnlink"><img src="assets/img/google-translate.png"
+                                    class="image-googletradutor">Tradutor</button></a>
+                    </li>
+                    <li><a href="https://photos.google.com/?authuser=0" class="nav-linksub"><button class="btnlink"><img
+                                    src="assets/img/google-fotos.png" class="image-googleft">Fotos</button></a>
+                    </li>
+                    <li><a href="https://docs.google.com/document/?usp=docs_alc&authuser=0" class="nav-linksub"><button
+                                class="btnlink"><img src="assets/img/google-documents.png"
+                                    class="image-googledoc">Docs</button></a>
+                    </li>
+                    <li><a href="https://docs.google.com/spreadsheets/?usp=sheets_alc&authuser=0"
+                            class="nav-linksub"><button class="btnlink"><img src="assets/img/google-sheets.png"
+                                    class="image-googlesheets">Sheets</button></a>
+                    </li>
+                    <li><a href="https://docs.google.com/forms/?authuser=0" class="nav-linksub"><button
+                                class="btnlink"><img src="assets/img/google-forms.png"
+                                    class="image-googleforms">Forms</button></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="allgoogle" id="Circulo">
+        <div class="circulo" style="color:#fff" onmouseleave="fecharDiv()">
+            <img src="assets/img/google3d.png" class="logo">
+        </div>
+        <div class="content" onmouseleave="fecharDiv()">
+            <img src="assets/img/googleicon.png" class="productImg" width="270px" height="90px">
+            <div class="section-buscar" id="search-form">
+                <input type="search" placeholder="Pesquise no Google ou escreva um URL" name="buscar" id="search-field"
+                    class="section-buscador"><img src="assets/img/pesquisa.png" alt="" class="section-logopesquisa">
+                <button id="voice-search-button" class="section-btnvoz" onclick="setupVoiceSearch()"
+                    title="Pesquisar por voz"><img src="assets/img/imgvoz.png" alt="Pesquise por voz"
+                        class="imgvoz"></button>
+            </div>
+            <div class="btns-google" onmouseleave="fecharDiv()">
+                <button class="btnpesquisa" id="btnpesquisa">Pesquisa Google</button>
+                <a href="https://www.google.com/doodles"><button class="btncomsorte" id="btncomdorte">Estou com
+                        sorte</button></a>
+            </div>
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+    <script src="assets/JS/script.js"></script>
+
+
+</body>
+
+</html>

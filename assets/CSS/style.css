@@ -1,0 +1,622 @@
+
+/*Toda a página*/
+*{
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  align-items: center;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #000215e2;
+  
+}
+.allgoogle{
+  position: relative;
+  width: 350px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  transition: 0.5s;
+  border-radius: 20px;
+  
+}
+.allgoogle:hover{
+  width: 600px;
+  transition-delay: 0.5s;
+  min-width: 250px;
+}
+.allgoogle .circulo{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 5rem;
+}
+
+.allgoogle .circulo::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 350px;
+  height: 350px;
+  background: #000215e2;
+  border: 5px solid #ffffff80;
+  animation: google-colors-spin 2s infinite;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 10px #ffffff9d);
+  transition-delay: 0.75s, 1s;
+}
+.allgoogle .circulo:hover{
+  animation: none;
+}
+@keyframes google-colors-spin {
+  0% {
+    border-color: #4285F4;
+    
+  }
+  25% {
+    border-color: #DB4437;
+    
+  }
+  50% {
+    border-color: #F4B400;
+    
+  }
+  75% {
+    border-color: #0F9D58;
+
+  }
+  100% {
+    border-color: #4285F4;
+  }
+}
+
+
+.allgoogle:hover .circulo:before{
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: #ffffff;
+  transition-delay: 0.5s;
+  border: 1px;
+}
+
+.allgoogle .circulo .logo{
+  position: relative;
+  width: 250px;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+  top: 0.5rem;
+  left: 0.5rem;
+}
+
+.allgoogle:hover .circulo .logo{
+  transform: scale(0);
+  transition-delay: 0s;
+}
+.allgoogle .productImg{
+  position: absolute;
+  transform: translate(5rem, 8rem) scale(0) rotate(315deg);
+  transition: 0.5s ease-in-out;
+
+}
+
+.allgoogle:hover .productImg{
+  transform: translate(6.2rem, 3rem) scale(1) rotate(0deg);
+  transition-delay: 0.75s;
+}
+
+.allgoogle .content {
+  position: absolute;
+  padding: 20px 20px 20px 40px;
+  opacity: 0;
+  transition: 0.5s;
+  visibility: hidden;
+}
+.allgoogle:hover .content{
+  transition-delay: 0.75s;
+  opacity: 1;
+  visibility: visible;
+  left: 20px;
+}
+.allgoogle:hover .section-buscar {
+  transform: translate(-2.3rem, 9.5rem) scale(1) rotate(0deg);
+  opacity: 1;
+  visibility: visible;
+}
+.allgoogle:hover .btns-google{
+  transform: translate(6rem, 9rem) scale(1) rotate(0deg);
+  transition-delay: 0.75s;
+  opacity: 1;
+  visibility: visible;
+}
+
+/*Cabeçalho do site*/
+
+  .nav-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px 20px;
+    max-width: max-content;
+    background-color: rgba(0, 0, 0, 0.164);
+    border-radius: 3rem;
+    height: 40px;
+  }
+  .nav-list {
+    display:flex;
+    align-items: center;
+    
+    
+  }
+  .nav-list ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    
+  }
+  .nav-item{
+    margin: 2px 5px;
+    margin-top: 10px;
+    padding: 0.5vh;
+   
+  }
+  .nav-link{
+    margin-top: 8px;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.15rem;
+    color: #ffffff;
+    font: normal 10pt Arial;
+  }
+
+
+  .submenu-button{
+    user-select: none;
+    border-radius: 15rem;
+    border: #ffffff;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: none;
+    
+    
+  }
+  .submenu-button:hover{
+    background-color: #e0e0e083;
+  }
+  .imgapps{
+    margin-top: 2px;
+    width: 20px;
+
+  }
+  .nav-submenu{
+    display: none;
+    position: absolute;
+    justify-content: center;
+    top: 80px;
+    z-index: 3;
+    border-bottom: 5px solid #fff;
+    animation: google-colors-spin 2s infinite;
+    background-color:transparent;
+    box-shadow: 0px 0px 5px #a9a9a9;
+    text-align: center;
+    width: 500px;
+    padding: 10px;
+    border-radius: 0.5rem;
+    overflow-y: auto;
+
+  }
+  .nav-link{
+    position: relative;
+    display: inline-block;
+  }
+  .nav-link::before{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom:0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    animation: google-spin 2s infinite;
+    border-radius: 4px;
+    scale: 0 1;
+    transform-origin: right;
+    transition: scale 0.25s;
+
+  }
+  .nav-link:hover::before{
+    scale: 1;
+    transform-origin: left;
+  }
+  
+  
+  .nav-submenu li {
+    position: flex;
+    padding: 5px 5px;
+    align-items: center;
+    display: inline-flex;
+   
+  }
+  .nav-linksub{
+    text-decoration: none;
+  }
+  .btnlink{
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    background: none;
+    border: none;
+    text-align: center;
+    align-items: center;
+    color: white;
+    align-items: center;
+    display: inline-block;
+
+  }
+  .btnlink:hover{
+    background-color: #93b8e83e;
+    border-radius: 0.5rem;
+    
+  }
+  .btn-Entrar{
+    user-select: none;
+    width: 90px;
+    height: 35px;
+    animation: google-spin 5s infinite;
+    border: 2px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .btn-Entrar:hover{
+    background-color:#000047;
+  }
+  .link-gmail{
+    color: white;
+    font: normal 11pt Tahoma;
+    text-decoration: none;
+  }
+  @keyframes google-spin {
+    0% {
+      background-color: #4285F4;
+      
+    }
+    25% {
+      background-color: #DB4437;
+      
+    }
+    50% {
+      background-color: #F4B400;
+      
+    }
+    75% {
+      background-color: #0F9D58;
+  
+    }
+    100% {
+      background-color: #4285F4;
+    }
+  }
+
+  /*Estilização do background da page*/
+
+.section-buscar{
+    border-radius: 2rem;
+    box-shadow: #b1b1b18a 0px 0px 0px 0.5px;
+    padding: 1rem;
+    background-position: center;
+    display: inline-block;
+    margin: 4px 2px;
+    width: 100%;
+    height: 0.8rem ;
+    align-items: auto;
+    max-width: 520px;
+    user-select: none;
+   
+}
+.section-buscar:hover{
+  box-shadow: #d6d6d6fb 1px 1px 2.5px 2.5px;
+}
+.section-buscador{
+    position: relative;
+    top: -0.7rem;
+    display: inline-block;
+    border-radius: 2rem;
+    width: 36rem;
+    height: 1rem;
+    padding: 1rem 1.5rem;
+    font: normal 12pt Roboto;
+    max-width: 500px;
+    border: none;
+    
+}
+.section-buscador:focus{
+    outline: none;
+}
+.section-logopesquisa{
+    display: block;
+    width: 18px;
+    height: 18px;
+    position: relative;
+    top: -35px;
+    user-select: none;
+
+}
+
+.section-btnvoz{
+  display:block;
+  width: 15px; 
+  height: 20px;
+  position: relative;
+  top: -53px;
+  left: 31rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  user-select: none;
+  
+}
+.imgvoz{
+  width: 13px; 
+  height: 18px;
+}
+.btnpesquisa{
+  width: 135px;
+  height: 35px;
+  border-radius: 0.2rem;
+  border: none;
+  margin-top: -4rem;
+  cursor: pointer;
+  align-items: center;
+  color: #494949;
+  background-color: #f6f6f7;
+  font: normal 11pt Arial;
+  margin-right: 5px;
+  user-select: none;
+}
+.btnpesquisa:hover{
+  box-shadow: 0px 0px 0px 1px #bebebe96;
+}
+.btncomsorte{
+  width: 135px;
+  height: 35px;
+  border-radius: 0.2rem;
+  border: none;
+  margin-top: -4rem;
+  cursor: pointer;
+  align-items: center;
+  color: #494949;
+  background-color: #f6f6f7;
+  font: normal 11pt Arial;
+  margin-left: 5px;
+  user-select: none;
+}
+.btncomsorte:hover{
+  box-shadow: 0px 0px 0px 1px #bebebe96;
+}
+
+/*editor das imagens do submenu*/
+.image-cont{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: block;
+  left: 1.2rem;
+  padding-bottom: 0.7rem;
+}
+.image-googlepesq{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: block;
+  left: 1.2rem;
+  padding-bottom: 0.7rem;
+}
+.image-googlenego{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: block;
+  left: 1.2rem;
+  padding-bottom: 0.7rem;
+}
+.image-googlemaps{
+  position: relative;
+  width: 35px;
+  height: 35px;
+  display: block;
+  left: 1.2rem;
+  padding-bottom: 0.7rem;
+}
+.image-googleyt{
+  
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: block;
+  left: 1.2rem;
+  padding-bottom: 0.7rem;
+}
+.image-googleplay{
+  position: relative;
+  width: 45px;
+  height: 40px;
+  display: block;
+  left: 1.2rem;
+  padding-bottom: 0.7rem;
+}
+.image-googlenot{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: block;
+  left: 1.2rem;
+  padding-bottom: 0.7rem;
+}
+.image-googlegm{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: block;
+  left: 1.2rem;
+  padding-bottom: 0.7rem;
+}
+.image-googlemeet{
+  position: relative;
+  width: 45px;
+  height: 40px;
+  display: block;
+  left: 1.2rem;
+  padding-bottom: 0.7rem;
+}
+.image-googledrive{
+  position: relative;
+  width: 45px;
+  height: 40px;
+  display: block;
+  left: 1.2rem;
+  padding-bottom: 0.7rem;
+}
+.image-googletradutor{
+  position: relative;
+  width: 45px;
+  height: 40px;
+  display: block;
+  left: 1.2rem;
+  padding-bottom: 0.7rem;
+}
+.image-googleft{
+  position: relative;
+  width: 45px;
+  height: 40px;
+  display: block;
+  left: 1.2rem;
+  padding-bottom: 0.7rem;
+}
+.image-googledoc{
+  position: relative;
+  width: 45px;
+  height: 40px;
+  display: block;
+  left: 1.2rem;
+  padding-bottom: 0.7rem;
+}
+.image-googlesheets{
+  position: relative;
+  width: 45px;
+  height: 40px;
+  display: block;
+  left: 1.2rem;
+  padding-bottom: 0.7rem;
+}
+.image-googleforms{
+  position: relative;
+  width: 45px;
+  height: 40px;
+  display: block;
+  left: 1.2rem;
+  padding-bottom: 0.7rem;
+}
+
+
+@media (max-width: 800px) {
+    .section-buscador {
+      font-size: 14px;
+      width: 23rem;
+    }
+    .section-buscar{
+      width: 25rem;
+    }
+    .section-btnvoz{
+      left: 23rem;
+    }
+    .nav-menu{
+      padding: 1rem 2rem ;
+      
+    }
+    .productImg{
+      display: flex;
+      margin-left: -20px;
+      width: 270px;
+      height: 90px;
+    }
+  
+    .allgoogle .circulo{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      top: 5rem;
+    }
+    .allgoogle .circulo::before{
+      content: '';
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      background: #000215e2;
+      border: 5px solid #fff;
+      animation: google-colors-spin 2s infinite;
+      border-radius: 50%;
+      filter: drop-shadow(0 0 10px #fff);
+      transition-delay: 0.75s, 1s;
+    }
+    .allgoogle{
+      position: relative;
+      width: 250px;
+      height: 250px;
+      display: flex;
+      justify-content: center;
+      transition: 0.5s;
+      border-radius: 20px;
+      
+    }
+    .allgoogle:hover{
+      width: 450px;
+      height: 400px;
+      transition-delay: 0.5s;
+    }
+    .allgoogle .circulo .logo{
+      position: relative;
+      width: 150px;
+      top: 0.5rem;
+      left: 0.5rem;
+    }
+    .allgoogle:hover .section-buscar {
+      transform: translate(-3.3rem, 9rem) scale(1) rotate(0deg);
+      opacity: 1;
+      visibility: visible;
+    }
+    .allgoogle:hover .btns-google{
+      transform: translate(1.5rem, 8rem) scale(1) rotate(0deg);
+      transition-delay: 0.75s;
+      opacity: 1;
+      visibility: visible;
+    }
+    .allgoogle:hover .productImg{
+      transform: translate(3.3rem, 3rem) scale(1) rotate(0deg);
+      transition-delay: 0.75s;
+    }
+    .nav-submenu{
+      width: 350px;
+    }
+  }
+  /*telas menores*/
+
+
+
